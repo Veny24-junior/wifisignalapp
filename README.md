@@ -13,43 +13,49 @@
 ---
 
 ## 📝 Descrição da Aplicação
-O **Wi-Fi Signal Tester** é uma aplicação nativa para Android concebida para monitorizar, analisar e testar a intensidade e qualidade das ligações Wi-Fi em tempo real. A ferramenta permite aos utilizadores avaliar a estabilidade das redes sem fios locais e tomar decisões informadas sobre a posição e cobertura do sinal.
+O **Wi-Fi Signal Tester** é uma aplicação nativa para Android concebida para monitorizar, analisar e mapear a cobertura de redes sem fios locais. A ferramenta realiza varreduras (scans) do ambiente para listar todas as redes disponíveis e as respetivas métricas técnicas, permitindo avaliar a estabilidade do sinal e otimizar a infraestrutura Wi-Fi.
 
 ---
 
 ## ⚡ Funcionalidades Implementadas
-* **Leitura da Intensidade do Sinal (RSSI):** Medição do nível de sinal em dBm.
-* **Informações da Rede Wi-Fi:** Exibição do SSID (nome da rede), BSSID (endereço MAC do Ponto de Acesso) e velocidade de ligação.
-* **Atualização em Tempo Real:** Atualização contínua das métricas de sinal.
-* **Análise Visual do Sinal:** Indicadores gráficos para facilidade de interpretação do estado da rede (Fraco, Médio, Forte).
+* **Varredura de Redes (Scan):** Deteção de múltiplas redes Wi-Fi em redor em tempo real.
+* **Leitura da Intensidade do Sinal (RSSI):** Medição precisa do nível de sinal em dBm.
+* **Informações Técnicas da Rede:** Exibição do SSID (incluindo redes ocultas), BSSID (MAC) e Frequência (2.4 GHz ou 5 GHz).
+* **Gestão Dinâmica de Permissões:** Tratamento de permissões de localização em tempo de execução (compatível com Android 10 a 14).
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️️ Tecnologias Utilizadas
 * **Linguagem:** Java
-* **Plataforma Target:** Android SDK
-* **Sistema de Build:** Gradle 8.5 (Gradle Wrapper)
-* **Ambiente de Desenvolvimento:** VS Code / Android Studio
+* **Plataforma Target:** Android SDK (API 34)
+* **Sistema de Build:** Gradle 8.5 (Wrapper)
+* **Ambiente:** VS Code / Android Studio
 
 ---
 
 ## 🔒 Permissões Utilizadas (`AndroidManifest.xml`)
-* `android.permission.ACCESS_WIFI_STATE`: Permite aceder a informações sobre redes Wi-Fi.
-* `android.permission.CHANGE_WIFI_STATE`: Permite alterar o estado da ligação Wi-Fi, se necessário.
-* `android.permission.ACCESS_FINE_LOCATION`: Necessária em versões do Android 8.0+ para obter o SSID/BSSID da rede Wi-Fi conectada.
-* `android.permission.ACCESS_COARSE_LOCATION`: Permissão complementar de localização aproximada para varredura de redes.
+* `ACCESS_WIFI_STATE` e `CHANGE_WIFI_STATE`: Verificar estado e iniciar varredura de redes.
+* `ACCESS_NETWORK_STATE`: Verificar a conectividade do dispositivo.
+* `ACCESS_FINE_LOCATION` e `ACCESS_COARSE_LOCATION`: Obrigatórias no Android 10+ para obter dados de redes Wi-Fi por questões de privacidade.
+* `NEARBY_WIFI_DEVICES`: Necessária no Android 13+ para varreduras otimizadas.
 
 ---
 
 ## 🚀 Instruções para Executar o Projeto
 
-### Pré-requisitos
-* Java Development Kit (JDK 17 ou superior) instalado.
-* Dispositivo físico Android (com Depuração USB ativa) ou Emulador Android.
-
-### Passo a Passo
-
 1. **Clonar o Repositório:**
    ```bash
-   git clone [https://github.com/TEU_UTILIZADOR/wifisignalapp.git](https://github.com/TEU_UTILIZADOR/wifisignalapp.git)
+   git clone [https://github.com/Veny24-junior/wifisignalapp.git](https://github.com/Veny24-junior/wifisignalapp.git)
    cd wifisignalapp
+   
+Compilar a Aplicação: .\gradlew assembleDebug
+
+Instalar o APK (via ADB):  adb install app/build/outputs/apk/debug/app-debug.apk
+
+
+Testar:
+
+Ligue o Wi-Fi e o GPS (Localização) do telemóvel.
+
+Abra a app, clique em "Iniciar Leitura" e aceite as permissões.
+   
