@@ -53,9 +53,26 @@ Compilar a Aplicação: .\gradlew assembleDebug
 Instalar o APK (via ADB):  adb install app/build/outputs/apk/debug/app-debug.apk
 
 
-Testar:
+## Testar:
 
-Ligue o Wi-Fi e o GPS (Localização) do telemóvel.
+**Ligue o Wi-Fi e o GPS (Localização) do telemóvel.**
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/2e9001bf-1393-4ba5-bb0b-9d66f3b83210" />
 
-Abra a app, clique em "Iniciar Leitura" e aceite as permissões.
+
+**Abra a app, clique em "Iniciar Leitura" e aceite as permissões.**
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/2402f9fd-4430-48e7-a528-b1e93889fde0" />
+
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/deddf161-80cc-4479-adec-5737059f4e2a" />
+
+
+## RESULTADO FINAL DA LEITURA QUANDO ESTA CONECTADO A UMA REDE
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/83f41957-6847-4f72-bf06-268e42079653" />
+
+
+
+## RESULTADO FINAL DA LEITURA QUANDO NAO ESTA CONECTADO A UMA REDE
+<img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/84d6ef2e-844e-4bd7-81ba-9f139baaad2d" />
+
+
+
    
